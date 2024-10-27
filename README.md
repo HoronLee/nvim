@@ -5,5 +5,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## 目前自定义内容
 
-1. catppuccin主题自定义，不使用默认TokyoNight主题`colorscheme.lua`
-2. 添加关于终端自动选择的逻辑`options.lua`
+1. catppuccin主题自定义，不使用默认TokyoNight主题`plugins/colorscheme.lua`
+2. 添加关于终端自动选择的逻辑`config/options.lua`
+3. 添加codium插件，并自定义快捷键`plugins/codeium.lua`
