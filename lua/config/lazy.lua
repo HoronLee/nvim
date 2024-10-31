@@ -50,4 +50,12 @@ require("lazy").setup({
       },
     },
   },
+  -- 自定义插件仓库加速源
+  git = {
+    log = { "-10" }, -- 只显示最新10条commit
+    timeout = 120, -- 当超过2分钟后杀死进程
+    -- 地址模板定义
+    url_format = "git@github.com:%s",
+    -- url_format = "https://www.ghproxy.cn/https://github.com/%s",
+  },
 })
