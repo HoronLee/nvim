@@ -11,9 +11,3 @@ elseif vim.fn.has("linux") then
     LazyVim.terminal.setup("bash")
   end
 end
-
--- 设置proto文件为proto类型(默认为protobuf，因未知原因不高亮显示)
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = "*.api",
-  command = "set filetype=proto",
-})
