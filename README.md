@@ -10,3 +10,5 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 3. 添加codium插件，并自定义快捷键`plugins/codeium.lua`
 4. 添加自定义仓库源功能，解决无梯拉不到插件的问题`config/lazy.lua`
 5. 添加 goctl 支持插件（.api），但是目前无法使用，待解决`plugins/goctl.lua`
+6. 添加行内显示优化插件`plugins/tiDiagnostic.lua`
+   1. 为配合此插件，需要在 LSP 配置完成之前关闭自带的行内显示`config/autocmds.lua`
