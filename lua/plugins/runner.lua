@@ -33,6 +33,7 @@ return {
           end)
         end,
         node = "node $fileName",
+        go = "go run $fileName",
       },
     })
   end,
