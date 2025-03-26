@@ -8,3 +8,5 @@ vim.keymap.set("n", "<leader>rp", ":RunProject<CR>", { noremap = true, silent = 
 vim.keymap.set("n", "<leader>rc", ":RunClose<CR>", { noremap = true, silent = false })
 vim.keymap.set("n", "<leader>crf", ":CRFiletype<CR>", { noremap = true, silent = false })
 vim.keymap.set("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false })
+-- CodeCompanion自定义插件
+vim.keymap.set({ "n", "v" }, "<leader>cca", ":CodeCompanionActions<CR>", { noremap = true, silent = false })
