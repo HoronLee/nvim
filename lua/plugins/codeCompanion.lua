@@ -8,9 +8,9 @@ return {
     },
     opts = {
       strategies = {
-        chat = { adapter = "siliconflow_v3" },
-        inline = { adapter = "siliconflow_v3" },
-        agent = { adapter = "siliconflow_v3" },
+        chat = { adapter = "deepseek" },
+        inline = { adapter = "deepseek" },
+        agent = { adapter = "deepseek" },
       },
       adapters = {
         deepseek = function()
