@@ -8,9 +8,9 @@ return {
     },
     opts = {
       strategies = {
-        chat = { adapter = "deepseek" },
-        inline = { adapter = "deepseek" },
-        agent = { adapter = "deepseek" },
+        chat = { adapter = "copilot" },
+        inline = { adapter = "copilot" },
+        agent = { adapter = "copilot" },
       },
       adapters = {
         deepseek = function()
