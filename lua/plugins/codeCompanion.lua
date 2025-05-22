@@ -2,6 +2,9 @@ return {
   {
     "olimorris/codecompanion.nvim",
     config = true,
+    keys = {
+      { "<leader>a", ":CodeCompanionActions<CR>", mode = { "n", "v" }, desc = "CodeCompanion Actions" },
+    },
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",

@@ -1,6 +1,13 @@
 -- 快速运行代码
 return {
   "CRAG666/code_runner.nvim",
+  keys = {
+    { "<leader>rr", ":RunCode<CR>", desc = "Run Code" },
+    { "<leader>rf", ":RunFile<CR>", desc = "Run File" },
+    { "<leader>rft", ":RunFile tab<CR>", desc = "Run File in Tab" },
+    { "<leader>rp", ":RunProject<CR>", desc = "Run Project" },
+    { "<leader>rc", ":RunClose<CR>", desc = "Close Runner" },
+  },
   config = function()
     require("code_runner").setup({
       filetype = {
