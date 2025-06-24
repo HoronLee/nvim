@@ -76,7 +76,7 @@ return {
       },
       opts = {
         language = "Chinese",
-        log_level = "debug",
+        log_level = "warn",
       },
     },
   },
