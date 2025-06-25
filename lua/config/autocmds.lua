@@ -28,3 +28,26 @@ if vim.fn.executable("win32yank.exe") == 1 then
     cache_enabled = 0,
   }
 end
+
+-- 自定义窗口的高度和宽度
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = "*",
+  callback = function(args)
+    local ft = vim.bo[args.buf].filetype
+    local winid = vim.api.nvim_get_current_win()
+    local pos = vim.fn.win_screenpos(winid)
+    -- snacks_terminal 底部窗口，高度设置
+    if ft == "snacks_terminal" then
+      -- 屏幕底部二分之一
+      if pos[1] > vim.o.lines / 2 then
+        vim.api.nvim_win_set_height(winid, 15) -- 设置你想要的高度
+      end
+    end
+    -- codecompanion 右侧窗口，宽度设置
+    if ft == "codecompanion" then
+      if pos[2] > vim.o.columns / 2 then
+        vim.api.nvim_win_set_width(winid, 70) -- 设置你想要的宽度
+      end
+    end
+  end,
+})
