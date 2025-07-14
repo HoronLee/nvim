@@ -9,3 +9,7 @@ elseif vim.fn.has("unix") == 1 then
   local shell = vim.fn.executable("fish") == 1 and "fish" or vim.fn.executable("zsh") == 1 and "zsh" or "bash"
   LazyVim.terminal.setup(shell)
 end
+
+-- 设置自动换行
+vim.opt.wrap = true
+vim.opt.linebreak = true
