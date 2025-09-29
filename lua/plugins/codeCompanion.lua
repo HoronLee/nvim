@@ -11,9 +11,9 @@ return {
     },
     opts = {
       strategies = {
-        chat = { adapter = "copilot" },
-        inline = { adapter = "copilot" },
-        agent = { adapter = "copilot" },
+        chat = { adapter = "yuegle" },
+        inline = { adapter = "yuegle" },
+        agent = { adapter = "yuegle" },
       },
       adapters = {
         deepseek = function()
@@ -32,7 +32,7 @@ return {
           })
         end,
 
-        siliconflow_r1 = function()
+        siliconflow = function()
           return require("codecompanion.adapters").extend("deepseek", {
             name = "siliconflow_r1",
             url = "https://api.siliconflow.cn/v1/chat/completions",
@@ -53,21 +53,26 @@ return {
           })
         end,
 
-        siliconflow_v3 = function()
-          return require("codecompanion.adapters").extend("deepseek", {
-            name = "siliconflow_v3",
-            url = "https://api.siliconflow.cn/v1/chat/completions",
+        yuegle = function()
+          return require("codecompanion.adapters").extend("openai", {
+            name = "yuegle",
+            -- OpenAI 兼容的 API 端点通常是 /v1/chat/completions
+            url = "https://api.yuegle.com/v1/chat/completions",
             env = {
               api_key = function()
-                return os.getenv("DEEPSEEK_API_KEY_S")
+                -- 建议将 API 密钥存储在环境变量中，而不是硬编码
+                return os.getenv("YUEGLE_API_KEY")
               end,
             },
             schema = {
               model = {
-                default = "deepseek-ai/DeepSeek-V3",
+                -- 设置一个默认模型
+                default = "gpt-4o-2024-11-20",
+                -- 提供所有可选的模型列表
                 choices = {
-                  "deepseek-ai/DeepSeek-V3",
-                  ["deepseek-ai/DeepSeek-R1"] = { opts = { can_reason = true } },
+                  "gpt-4o-2024-11-20",
+                  "gpt-4.1",
+                  "gpt-5-chat",
                 },
               },
             },
