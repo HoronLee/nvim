@@ -12,13 +12,6 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
-      color_overrides = {
-        mocha = {
-          base = "#060b16",
-          mantle = "#090f1d",
-          crust = "#0b1625",
-        },
-      },
       integrations = {
         aerial = true,
         alpha = true,
