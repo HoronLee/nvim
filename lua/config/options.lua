@@ -13,3 +13,35 @@ end
 -- 设置自动换行
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+-- neovide 设置
+if vim.g.neovide then
+  -- 字体
+  vim.o.guifont = "Maple Mono NF CN:h14"
+  -- 窗口透明度
+  vim.g.neovide_opacity = 0.8
+  vim.g.neovide_normal_opacity = 0.8
+  -- 窗口模糊
+  -- vim.g.neovide_window_blurred = true
+  -- vim.g.neovide_floating_blur_amount_x = 0.2
+  -- vim.g.neovide_floating_blur_amount_y = 0.2
+  -- 悬浮阴影
+  -- vim.g.neovide_floating_shadow = true
+  -- vim.g.neovide_floating_z_height = 10
+  -- vim.g.neovide_light_angle_degrees = 45
+  -- vim.g.neovide_light_radius = 5
+  -- 显示边框
+  vim.g.neovide_show_border = true
+  -- 主题 自动切换
+  vim.g.neovide_theme = "auto"
+  -- 空闲刷新率
+  vim.g.neovide_refresh_rate_idle = 5
+  -- 全屏
+  -- vim.g.neovide_fullscreen = true
+  -- 简单全屏
+  -- vim.g.neovide_macos_simple_fullscreen = true
+  -- 记住上一个窗口大小
+  vim.g.neovide_remember_window_size = true
+  -- 分析器表盘
+  vim.g.neovide_profiler = false
+end
