@@ -20,14 +20,14 @@ if vim.g.neovide then
   vim.o.guifont = "Maple Mono NF CN:h14"
   -- 背景颜色
   -- Helper function for transparency formatting
-  local alpha = function()
-    return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
-  end
+  -- local alpha = function()
+  --   return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
+  -- end
   -- g:neovide_opacity should be 0 if you want to unify transparency of content and title bar.
   -- 窗口透明度
-  vim.g.neovide_opacity = 0
+  vim.g.neovide_opacity = 0.3
   vim.g.transparency = 0.8
-  vim.g.neovide_background_color = "#0f1117" .. alpha()
+  -- vim.g.neovide_background_color = alpha()
   -- 窗口模糊
   vim.g.neovide_window_blurred = true
   -- 悬浮阴影
