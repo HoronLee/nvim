@@ -1,6 +1,7 @@
 return {
   {
     "olimorris/codecompanion.nvim",
+    enabled = false,
     config = true,
     keys = {
       { "<leader>a", ":CodeCompanionActions<CR>", mode = { "n", "v" }, desc = "CodeCompanion Actions" },
