@@ -51,3 +51,16 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
     end
   end,
 })
+
+-- macOS下，使用Hammerspoon实现按下Esc时，切换到系统的输入法
+-- 以下是Hammerspoon的配置，放在~/.hammerspoon/init.lua中
+-- hs.urlevent.bind("toenim", function()
+-- 	hs.keycodes.currentSourceID("com.apple.keylayout.ABC")
+-- 	print("toenim called, now:", hs.keycodes.currentSourceID())
+-- end)
+-- vim脚本
+-- vim.api.nvim_create_autocmd({ "VimEnter", "VimLeavePre", "InsertLeave", "FocusGained", "TermLeave" }, {
+--   callback = function()
+--     vim.system({ "open", "-g", "hammerspoon://toenim" })
+--   end,
+-- })

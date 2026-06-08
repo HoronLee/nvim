@@ -35,7 +35,12 @@ return {
         -- table: additional groups that should be cleared
         extra_groups = {},
         -- table: groups you don't want to clear
-        exclude_groups = {},
+        exclude_groups = {
+          "AvanteTitle",
+          "AvanteReversedTitle",
+          "AvanteSubtitle",
+          "AvanteReversedSubtitle",
+        },
         -- function: code to be executed after highlight groups are cleared
         -- Also the user event "TransparentClear" will be triggered
         on_clear = function() end,
@@ -43,6 +48,9 @@ return {
       require("transparent").clear_prefix("BufferLine")
       require("transparent").clear_prefix("NeoTree")
       require("transparent").clear_prefix("lualine")
+      require("transparent").clear_prefix("Snacks")
+      require("transparent").clear_prefix("SnacksPicker")
+      require("transparent").clear_prefix("Avante")
     end,
   },
 }

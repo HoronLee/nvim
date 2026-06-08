@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Hop
 -- 用 hop 接管 f/F/t/T，并强制使用 INLINE hint，避免 OVERLAY 在当前主题下不明显。
 local function hop_char1(direction_name, hint_offset)
   return function()

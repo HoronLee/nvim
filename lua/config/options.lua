@@ -49,3 +49,7 @@ if vim.g.neovide then
   -- 分析器表盘
   vim.g.neovide_profiler = false
 end
+
+-- avante.nvim 推荐选项
+-- 视图只能通过全局状态栏完全折叠
+vim.opt.laststatus = 3
