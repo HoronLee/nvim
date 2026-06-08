@@ -40,6 +40,8 @@ return {
           "AvanteReversedTitle",
           "AvanteSubtitle",
           "AvanteReversedSubtitle",
+          "AvanteThirdTitle",
+          "AvanteReversedThirdTitle",
         },
         -- function: code to be executed after highlight groups are cleared
         -- Also the user event "TransparentClear" will be triggered

@@ -5,6 +5,26 @@ return {
   ---@module 'avante'
   ---@type avante.Config
   opts = {
+    -- mcphub集成
+    system_prompt = function()
+      local ok, mcphub = pcall(require, "mcphub")
+      if not ok then
+        return ""
+      end
+
+      local hub = mcphub.get_hub_instance()
+      return hub and hub:get_active_servers_prompt() or ""
+    end,
+    custom_tools = function()
+      local ok, avante_ext = pcall(require, "mcphub.extensions.avante")
+      if not ok then
+        return {}
+      end
+      return {
+        avante_ext.mcp_tool(),
+      }
+    end,
+    -- 内建网络搜索工具
     web_search_engine = {
       provider = "tavily",
     },
